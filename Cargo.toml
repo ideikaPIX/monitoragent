@@ -7,6 +7,7 @@ edition = "2021"
 sysinfo = "0.27.8"
 crossterm = "0.24"
 termion = { version = "1.5.6", default-features = false }  # Указываем termion с отключенными default-features
+chrono = "0.4"
 
 [[bin]]  # Добавляем новый бинарный файл
 name = "amunix"
