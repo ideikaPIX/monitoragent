@@ -1,0 +1,23 @@
+[package]
+name = "monitoragent"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sysinfo = "0.27.8"
+crossterm = "0.24"
+termion = { version = "1.5.6", default-features = false }  # Указываем termion с отключенными default-features
+
+[[bin]]  # Добавляем новый бинарный файл
+name = "amunix"
+path = "src/amunix.rs"  # Путь к вашему файлу amunix.rs
+
+[[bin]]  # Добавляем другой бинарный файл, если нужно
+name = "amwin"
+path = "src/amwin.rs"  # Путь к вашему файлу amwin.rs
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
